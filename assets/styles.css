@@ -43,6 +43,10 @@
 }
 
 
+.logo img{
+    border-radius: 50px;
+}
+
 .imageProducto {
     width: auto;
 }
