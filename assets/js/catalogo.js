@@ -289,8 +289,6 @@ class Catalogo {
             let index = idItem - 1;
             const button = buttonsAdd.item(index);
 
-            const btnSumar = buttonsSumar.item(index);
-            const btnRestar = buttonsRestar.item(index);
             // Si ya está en el carrito recuperado de Local Store, lo deshabilito del catálogo:
             if (idItem == id) {
                 // Al item del catálogo le pongo la cantidad que figura en el Local Storage:
@@ -322,10 +320,7 @@ class Catalogo {
     clearCart() {
         this.cart = [];
 		Storage.saveCart(this.cart);
-        
-		const buttonsAdd = document.querySelectorAll(".addToCart");
-        const buttonsSumar = document.querySelectorAll(".btn-sumar");
-        const buttonsRestar = document.querySelectorAll(".btn-retirar");
+
         const buttonsContador = document.querySelectorAll(".contador");
 		
         while (cartContent.children.length > 0) {
