@@ -344,24 +344,11 @@ class Catalogo {
     updateFromStorage() {
         //Actualizo el total a pagar con los datos del Storage
         this.actualizarTotal();
-        
 
         const cartStorage = Storage.getCart();
-        const buttonsAdd = document.querySelectorAll(".addToCart");
-        const buttonsSumar = document.querySelectorAll(".btn-sumar");
-        const buttonsRestar = document.querySelectorAll(".btn-retirar");
 
         cartStorage.forEach((itemCart) => {
             this.productImgInCart(itemCart);
-           /*
-            let id = itemCart.id;
-
-            let index = id - 1;
-            const button = buttonsAdd.item(index);
-
-            const btnSumar = buttonsSumar.item(index);
-            const btnRestar = buttonsRestar.item(index);
-           */
         });
         // Actualizo el iconito con el nro de la cantidad de productos elegidos
         this.getTotalItems();
